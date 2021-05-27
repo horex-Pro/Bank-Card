@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه ثبت اطلاعات کارت</title>
+    <link rel="stylesheet" href="dist/css/style.min.css">
+
+    <style>
+
+        .cart-container{
+
+            transition: all 3s;
+
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="time-out-box" id="timeOutBox">
+
+        زمان تکمیل فرم به پایان رسید. لطفا دوباره تلاش کنید
+
+    </div>
+
+    <main>
+
+        <div class="cart-container" id="cartContainer">
+
+            <div class="cart-inner">
+
+                <div class="cart">
+
+                    <div class="bank-name-box">    
+
+                        <img id="bankLogoPlaceholder">
+
+                    </div>
+    
+                    <div class="cart-number-box" id="cartNumberBox">
+    
+                        محل قرار گیری شماره کارت
+    
+                    </div>
+                    <div class="cart-owner-name" id="cardOwnerBox">
+    
+                        نام صاحب کارت
+    
+                    </div>
+    
+                    <div class="cart-bottom" > 
+    
+                        <div class="cart-expite-date">
+    
+                            <span id="monthExpireDateBox" >
+                                ماه انقضا
+                            </span>
+                            
+                            <span>
+                                /
+                            </span>
+                            
+                            <span id="yearExpireDateBox">
+                                سال انقضا
+                            </span>
+    
+                        </div>
+
+                        <div class="cvv2-number" id="cvv2Number">
+
+                            شماره(CVV2)
+
+                        </div>
+    
+    
+                    </div>
+
+                </div>
+
+            </div>
+
+            <form class="form " id="cartForm" action="#">
+
+                <div class="form-inner" id="formInner">
+
+                    <div class="form-item">
+
+                        <label for="">شماره کارت</label>
+                        <input type="text" name="cartNumber" id="cartNumber" placeholder="0000-0000-0000-0000-0000">
+
+                    </div>
+
+
+                    
+                    <div class="form-row">
+
+                        <div class="form-row-item">
+
+                            <label for="">صاحب کارت</label>
+                            <input type="text" name="CRDHolder" id="CRDHolder" placeholder="نام شناسنامه ای دارنده">
+
+                        </div>
+
+                        <div class="form-row-item">
+
+                            <label for="">شناسه دوم (CCV2)</label>
+                           <input type="text" name="CVV2Number" id="CVV2Number" placeholder="کد سه یا چهار رقمی کارت">
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-row-item">
+
+                            <label for="">ماه انقضا</label>
+                           <input type="text" name="monthExpireDate" id="monthExpireDate" placeholder="ماه اعتبار کارت">
+
+                        </div>
+
+                        <div class="form-row-item">
+
+                            <label for="">سال انقضا</label>
+                           <input type="text" name="yearExpireDate" id="yearExpireDate" placeholder="سال انقضای کارت">
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-item">
+
+                        <label for="">لطفا یکی از بانک ها را انتخاب کنید.</label>
+                        
+                        <select name="bankName" id="bankName">
+
+                            <option value="یکی از گزینه ها را انتخاب کنید">یکی از گزینه ها را انتخاب کنید</option>
+                            <option value="بانک شهر">بانک شهر</option>
+                            <option value="بانک ایران زمین">بانک ایران زمین</option>
+                            <option value="بانک افضل طوس">بانک افضل طوس</option>
+                            <option value="بانک سرمایه">بانک سرمایه</option>
+                            <option value="بانک دی">بانک دی</option>
+
+
+                        </select>
+
+                    </div>
+
+                    <button type="submit" class="cart-from-btn">
+
+                        ثبت قانونی کارت
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <footer id="footer">
+
+            <div class="timer-box">
+
+                <span>300s</span>
+                <span>/</span>
+                <span id="counterNmuber" ></span>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+
+    <script>
+        if (CSS && 'paintWorklet' in CSS) CSS.paintWorklet.addModule('https://unpkg.com/smooth-corners')
+      </script>
+
+      <script src="app/js/app.js"></script>
+
+</body>
+</html>

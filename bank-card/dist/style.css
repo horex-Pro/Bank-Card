@@ -1,0 +1,138 @@
+@import url("https://v1.fontapi.ir/css/Shabnam");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  direction: rtl;
+  font-family: 'Shabnam', sans-serif;
+}
+
+input {
+  font-family: 'Shabnam', sans-serif;
+  height: 60px;
+  margin: 0;
+  padding-right: 20px;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 10px 10px 20px rgba(105, 105, 105, 0.027);
+}
+
+.form-item {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item label {
+  margin-bottom: 10px;
+}
+
+.form-row {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+}
+
+.form-row .form-row-item {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.form-row .form-row-item input {
+  width: 100%;
+}
+
+.form-row .form-row-item:nth-child(1) {
+  margin-left: 20px;
+}
+
+input {
+  font-family: 'Shabnam', sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("../../../images/BG.jpg");
+  background-size: cover;
+}
+
+main .card-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 550px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 35px 20px 25px rgba(112, 112, 112, 0.014);
+  background-color: #fafafa;
+}
+
+@supports (mask-image: paint(smooth-corners)) {
+  main .card-container .card-container {
+    border-radius: 0;
+    mask-image: paint(smooth-corners);
+    --smooth-corners: 4;
+  }
+}
+
+main .card-container .card {
+  top: -70px;
+  left: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 78%;
+  height: 200px;
+  border-radius: 10px;
+  background: #fc8bdf;
+  background: linear-gradient(90deg, #fc8bdf 0%, #ffbbee 100%, #fc8bdf 100%);
+  transform: translateX(-50%);
+}
+
+main .card-container .card-card-inner {
+  background-color: black;
+}
+
+main .card-container .form {
+  position: absolute;
+  top: 135px;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .card-container .form .form-inner {
+  width: 78%;
+  height: 100%;
+  margin: 20px 0;
+}
+
+main .card-container .form .form-inner .card-from-btn {
+  text-align: center;
+  width: 100%;
+  font-family: 'Shabnam', sans-serif;
+  height: 60px;
+  margin: 20px 0 0;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #fc8bdf 0%, #ffbbee 100%, #fc8bdf 100%);
+  box-shadow: 10px 10px 20px rgba(105, 105, 105, 0.027);
+  cursor: pointer;
+}

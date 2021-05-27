@@ -1,0 +1,198 @@
+
+@import url('https://v1.fontapi.ir/css/Shabnam'); 
+
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+ body {
+
+    direction: rtl;
+    font-family: 'Shabnam', sans-serif;
+
+}
+
+
+
+input {
+
+    font-family: 'Shabnam', sans-serif;
+    height: 60px;
+    margin: 0;
+    padding-right: 20px;
+    outline: none;
+    border:0;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px rgba(105, 105, 105, 0.027);
+
+
+}
+
+.form-item {
+
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    label {
+
+        margin-bottom: 10px;
+
+    }
+  
+}
+
+
+.form-row {
+
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+
+    
+    .form-row-item {
+
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        input {
+
+            width: 100%;
+
+        }
+
+    }
+
+    .form-row-item:nth-child(1) {
+
+        margin-left: 20px;
+
+    }
+
+}
+
+
+
+input {
+
+    font-family: 'Shabnam', sans-serif;
+
+
+}
+
+
+
+
+
+main {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('../../../images/BG.jpg');
+    background-size: cover;
+
+    .card-container {
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+        height: 550px;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 35px 20px 25px rgba(112, 112, 112, 0.014);
+        background-color: rgb(250, 250, 250);
+
+
+        @supports (mask-image: paint(smooth-corners)) {
+            .card-container {
+              border-radius: 0;
+              mask-image: paint(smooth-corners);
+              --smooth-corners: 4;
+            }
+          }
+
+        .card {
+
+            top: -70px;
+            left: 50%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 78%;
+            height: 200px;
+            border-radius: 10px;
+            background: rgb(252,139,223);
+            background: linear-gradient(90deg, rgba(252,139,223,1) 0%, rgba(255,187,238,1) 100%, rgba(252,139,223,1) 100%);
+            transform:translateX(-50%);
+
+
+            &-card-inner{
+
+                background-color: black;
+
+            }
+
+
+
+
+        }
+
+        .form {
+
+            position: absolute;
+            top:135px;
+            width: 100%;
+            height: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            .form-inner {
+
+                width: 78%;
+                height: 100%;
+                margin:20px 0;
+
+                .card-from-btn {
+
+                    text-align: center;
+                   width: 100%; 
+                    font-family: 'Shabnam', sans-serif;
+                    height: 60px;
+                    margin: 20px 0 0;
+                    outline: none;
+                    border:0;
+                    border-radius: 5px;
+                    background: linear-gradient(90deg, rgba(252,139,223,1) 0%, rgba(255,187,238,1) 100%, rgba(252,139,223,1) 100%);
+                    box-shadow: 10px 10px 20px rgba(105, 105, 105, 0.027);
+                    cursor: pointer;
+
+
+                }
+
+            }
+
+        }
+
+        
+
+    }
+
+}
+
