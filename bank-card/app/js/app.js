@@ -153,24 +153,36 @@ function manageCartNumber(){
 
                 let value = e.target.value;
 
-                let cartNumberChar = value.split("");
+                // let cartNumberChar = value.split("");
 
-                cartNumberChar.splice(12 , 4 , '*' , '*' , '*' , '*');
-                cartNumberChar.splice(4 , 0 , '-');
-                cartNumberChar.splice(9 , 0 , '-');
-                cartNumberChar.splice(14 , 0 , '-');
+                // cartNumberChar.splice(12 , 4 , '*' , '*' , '*' , '*');
+                // cartNumberChar.splice(4 , 0 , '-');
+                // cartNumberChar.splice(9 , 0 , '-');
+                // cartNumberChar.splice(14 , 0 , '-');
 
-                cartNumberChar.forEach( (numberChar) => {
+                // cartNumberChar.forEach( (numberChar) => {
 
-                    let text = document.createElement('span');
+                //     let text = document.createElement('span');
 
-                    text.innerHTML = numberChar;
+                //     text.innerHTML = numberChar;
 
-                    let numberPlaceholder = document.querySelector('#cartNumberBox');
+                //     let numberPlaceholder = document.querySelector('#cartNumberBox');
 
-                    numberPlaceholder.appendChild(text);
+                //     numberPlaceholder.appendChild(text);
 
-                });      
+                // });
+                
+                let cartNumberOutputModel = value.substr( 0 , 12).padEnd( 16 , '*');
+
+                console.log(cartNumberOutputModel)
+
+                let text = document.createElement('span');
+
+                text.innerHTML = cartNumberOutputModel;
+
+                let numberPlaceholder = document.querySelector('#cartNumberBox');
+
+                numberPlaceholder.appendChild(text);
     
         }
         else{
